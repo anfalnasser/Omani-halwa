@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>صانعة الحلوى العُمانية</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff3ea;--card:#fff;--ink:#3b2340;--line:#f3d9c6;--pri:#7a2e78;--ok:#22a06b;--no:#e2556b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1323;--card:#2b1e35;--ink:#fbeedd;--line:#4a3556;--pri:#f0a8ec}}
+:root[data-theme="dark"]{--bg:#1c1323;--card:#2b1e35;--ink:#fbeedd;--line:#4a3556;--pri:#f0a8ec}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 1rem/1.6 Tajawal,system-ui,"Segoe UI",Tahoma,sans-serif;min-height:100vh}
+main{max-width:560px;margin:0 auto;padding:12px}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+h1{margin:0;font-size:clamp(1rem,4.4vw,1.35rem);font-weight:800;color:var(--pri)}
+.pill{background:var(--card);border:2px solid var(--line);border-radius:99px;padding:2px 14px;font-weight:800;white-space:nowrap}
+#pr{display:flex;gap:5px;margin-bottom:12px}
+#pr span{flex:1;max-width:44px;aspect-ratio:1;display:grid;place-items:center;border-radius:50%;background:var(--card);border:2px solid var(--line);opacity:.5;font-size:1.05rem;transition:.3s}
+#pr .on{opacity:1;border-color:#f4a62a;transform:scale(1.15);box-shadow:0 0 0 3px #f4a62a55}
+#pr .dn{opacity:1;background:#d6f5e6;border-color:var(--ok)}
+.sc{border-radius:24px;overflow:hidden;box-shadow:0 8px 22px #7a2e7826}
+svg{display:block;width:100%;height:auto}
+#mix{transition:fill 1s}
+#fl{transition:opacity 1s}
+.fl{animation:fk .45s ease-in-out infinite alternate}
+.fl:nth-child(2n){animation-delay:.25s}
+@keyframes fk{to{opacity:.55}}
+.stir{animation:sw 1.8s ease-in-out infinite;transform-origin:82px 148px}
+@keyframes sw{50%{transform:rotate(-4deg)}}
+#sm path{animation:up 2.4s linear infinite}
+#sm path:nth-child(2){animation-delay:.8s}
+#sm path:nth-child(3){animation-delay:1.6s}
+@keyframes up{0%{transform:translateY(8px);opacity:0}50%{opacity:.85}100%{transform:translateY(-16px);opacity:0}}
+.dr{animation:dr 1s ease-in forwards}
+@keyframes dr{0%{opacity:0;transform:translateY(-8px)}15%{opacity:1}80%{opacity:1;transform:translateY(46px)}100%{opacity:0;transform:translateY(58px)}}
+.tw{animation:tw 1.4s ease-in-out infinite alternate}
+@keyframes tw{from{opacity:.2}to{opacity:1}}
+.pn{background:var(--card);border-radius:24px;padding:16px;margin-top:12px;box-shadow:0 6px 18px #7a2e7818;animation:fi .4s}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}}
+.chip{display:inline-block;background:#7a2e78;color:#fff;border-radius:99px;padding:2px 14px;font-weight:800;font-size:.9rem}
+.d{margin:8px 0 2px;color:var(--pri);font-weight:700}
+.q{margin:6px 0 14px;font-size:1.2rem;font-weight:800;line-height:1.9}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.g button{font:inherit;font-size:1.3rem;font-weight:800;color:var(--ink);background:var(--card);border:3px solid;border-radius:18px;min-height:62px;padding:8px 4px;cursor:pointer;transition:transform .15s}
+.g button:nth-child(1){border-color:#f4a62a}.g button:nth-child(2){border-color:#e8607a}.g button:nth-child(3){border-color:#1f8a8a}.g button:nth-child(4){border-color:#8a6be0}
+.g button:active{transform:scale(.95)}
+.g button.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.g button.no{background:var(--no);border-color:var(--no);color:#fff;opacity:.55;animation:sk .35s}
+@keyframes sk{25%{transform:translateX(7px)}75%{transform:translateX(-7px)}}
+.hint,.sol{border-radius:14px;padding:10px 14px;margin-top:12px;font-weight:700}
+.hint{background:#fff1cc;color:#5b4210}
+.sol{background:#ddf6ea;color:#14573a}
+.go{display:block;width:100%;margin-top:12px;font:inherit;font-size:1.15rem;font-weight:800;color:#fff;border:0;border-radius:16px;padding:12px;cursor:pointer;background:linear-gradient(90deg,#e8607a,#7a2e78)}
+.go:focus-visible,.g button:focus-visible{outline:3px solid #f4a62a;outline-offset:2px}
+.stars{font-size:2.2rem;text-align:center}
+h2{margin:0 0 6px}
+.f{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.15;font-size:.9em;margin:0 .15em}
+.f i{font-style:normal;padding:0 .25em}
+.f i:first-child{border-bottom:2px solid currentColor}
+.m{display:inline-flex;align-items:center;gap:.1em;direction:ltr}
+.ex{direction:ltr;text-align:center;font-weight:800;font-size:1.8rem;margin:4px 0 14px}.sol .ex{font-size:1.25rem;margin:4px 0 0}
+.go,.g button,svg{touch-action:manipulation}
+.pu{animation:pu .7s ease-in-out infinite alternate}@keyframes pu{to{transform:scale(1.3)}}
+.pl{animation:gl .9s ease-in-out infinite alternate}@keyframes gl{to{box-shadow:0 0 0 7px #f4a62a77}}
+.mb{height:18px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:10px}.mb i{display:block;height:100%;background:linear-gradient(90deg,#f4a62a,#e8607a);border-radius:99px}
+.wb{animation:wb .45s}@keyframes wb{40%{transform:translateY(4px)}}
+#bb circle{transform-box:fill-box;animation:bu 1.6s ease-out infinite}#bb circle:nth-child(2){animation-delay:.4s}#bb circle:nth-child(3){animation-delay:.8s}#bb circle:nth-child(4){animation-delay:1.2s}
+@keyframes bu{0%{transform:translateY(0) scale(.4);opacity:0}30%{opacity:.9}100%{transform:translateY(-12px) scale(1.2);opacity:0}}
+button.pill{font:inherit;font-weight:800;color:var(--ink);cursor:pointer}
+.fg{height:7px;border-radius:6px;margin-bottom:8px;background:linear-gradient(90deg,#fff 0 33.3%,#db161b 33.3% 66.6%,#008000 66.6%);box-shadow:0 0 0 1px var(--line)}
+.tb{display:none;gap:6px;margin-top:12px;flex-wrap:wrap}.tb span{flex:1 1 30%;min-width:0;text-align:center;background:var(--card);border:3px solid var(--c);border-radius:14px;padding:2px 6px;font-weight:800;opacity:.6;transition:.2s}.tb .cur{opacity:1;background:var(--c);color:#fff;transform:scale(1.05)}
+.fa{margin-top:8px;font-size:.92rem;font-weight:700;line-height:1.7}
+.cd{background:#fff1cc;color:#5b4210;border-radius:14px;padding:12px;margin-top:10px;font-weight:700;line-height:1.8}
+.vl{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.vl span{background:#008000;color:#fff;border-radius:99px;padding:2px 12px;font-weight:700;font-size:.9rem}
+.turn{font-weight:800;color:var(--pri);margin-bottom:8px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+<div class="fg"></div><header><h1>🇴🇲 صانعة الحلوى العُمانية</h1><div style="display:flex;gap:6px"><button class="pill" id="mu" onclick="mute()" aria-label="الصوت">🔊</button><div class="pill">⭐ <b id="sc">٠</b></div></div></header>
+<div id="pr"></div>
+<div class="sc">
+<svg viewBox="0 0 360 250" role="img" aria-label="مطبخ عُماني تقليدي وفتاة بالزي العُماني تصنع الحلوى في قدر نحاسي كبير">
+<defs>
+<linearGradient id="w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2b47e"/><stop offset="1" stop-color="#c78b52"/></linearGradient>
+<linearGradient id="cu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e9a25b"/><stop offset=".45" stop-color="#f8c98c"/><stop offset="1" stop-color="#b3652c"/></linearGradient>
+<linearGradient id="hw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3963a"/><stop offset="1" stop-color="#8e3f12"/></linearGradient>
+<pattern id="pt" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="4" cy="5" r="1.5" fill="#fff" fill-opacity=".2"/><circle cx="13" cy="13" r="2" fill="#7a4b2a" fill-opacity=".14"/></pattern>
+<pattern id="zz" width="24" height="12" patternUnits="userSpaceOnUse"><path d="M0 0l12 10 12-10" fill="none" stroke="#7a4b2a" stroke-width="2.5"/></pattern>
+<pattern id="mt" width="16" height="12" patternUnits="userSpaceOnUse"><path d="M0 6h16M8 0v12" stroke="#a67f3c" stroke-width="2"/></pattern>
+<path id="fm" d="M0 0q-10-6 0-22q10 16 0 22z"/>
+</defs>
+<rect width="360" height="190" fill="url(#w)"/><rect width="360" height="190" fill="url(#pt)"/><rect y="4" width="360" height="12" fill="url(#zz)"/>
+<path d="M284 124V62a30 30 0 0 1 60 0v62z" fill="#bfe9f4" stroke="#6b3f22" stroke-width="6"/><circle cx="314" cy="62" r="9" fill="#fff6c8"/><path d="M314 32v92M284 78h60" stroke="#6b3f22" stroke-width="3"/>
+<path d="M118 22h140" stroke="#5a3a22" stroke-width="4" stroke-linecap="round"/><path d="M130 22v14M166 22v8M242 22v12" stroke="#5a3a22" stroke-width="2"/>
+<circle cx="130" cy="46" r="10" fill="url(#cu)"/><circle cx="166" cy="38" r="8" fill="url(#cu)"/><circle cx="242" cy="44" r="9" fill="url(#cu)"/>
+<path d="M12 70V42a17 17 0 0 1 34 0v28z" fill="#7a4b2a"/><path d="M22 70q-3-14 3-20l1-4h8l1 4q6 6 3 20z" fill="#e0a82e"/><path d="M52 18v36" stroke="#5a3a22" stroke-width="2.5"/><rect x="54" y="20" width="34" height="7.3" fill="#fff"/><rect x="54" y="27.3" width="34" height="7.3" fill="#db161b"/><rect x="54" y="34.6" width="34" height="7.3" fill="#008000"/><rect x="54" y="20" width="9" height="21.9" fill="#db161b"/>
+<rect y="186" width="360" height="64" fill="#c9a25a"/><rect y="186" width="360" height="64" fill="url(#mt)"/><rect y="186" width="360" height="7" fill="#7a4b2a"/>
+<g id="hearth">
+<ellipse cx="205" cy="208" rx="96" ry="8" fill="#000" opacity=".18"/>
+<path d="M152 205l108-9M152 196l108 9" stroke="#5a3418" stroke-width="9" stroke-linecap="round"/>
+<g id="fl" opacity="0"><use class="fl" href="#fm" x="165" y="203" fill="#ff7a2f"/><use class="fl" href="#fm" x="185" y="203" fill="#ffc23d"/><use class="fl" href="#fm" x="205" y="203" fill="#ff7a2f"/><use class="fl" href="#fm" x="225" y="203" fill="#ffc23d"/><use class="fl" href="#fm" x="245" y="203" fill="#ff7a2f"/></g>
+<path d="M128 206q-6-28 14-30h22q16 2 10 30z" fill="#9a8573"/><path d="M236 206q-6-28 14-30h22q16 2 10 30z" fill="#9a8573"/>
+</g>
+<g id="girl">
+<path d="M44 143q-9 20-8 42" stroke="#17896e" stroke-width="11" stroke-linecap="round" fill="none"/><circle cx="35" cy="188" r="5" fill="#f0bf98"/>
+<rect x="40" y="206" width="16" height="19" fill="#c2185b"/><rect x="68" y="206" width="16" height="19" fill="#c2185b"/>
+<rect x="40" y="220" width="16" height="5" fill="#f4b43a"/><rect x="68" y="220" width="16" height="5" fill="#f4b43a"/>
+<ellipse cx="48" cy="229" rx="10" ry="4" fill="#3b2340"/><ellipse cx="76" cy="229" rx="10" ry="4" fill="#3b2340"/>
+<path d="M40 138q22-12 44 0l14 68H26z" fill="#17896e"/>
+<path d="M52 138l10 24 10-24z" fill="#f4b43a"/><circle cx="62" cy="150" r="2" fill="#c2185b"/>
+<path d="M27 201h70" stroke="#f4b43a" stroke-width="8"/><path d="M27 201h70" stroke="#c2185b" stroke-width="3" stroke-dasharray="3 5"/>
+<path d="M36 102a26 31 0 0 1 52 0q3 26-8 44q-18 8-36 0q-11-18-8-44z" fill="#c2185b"/>
+<ellipse cx="62" cy="104" rx="16" ry="19" fill="#f0bf98"/>
+<path d="M46 90q16-14 32 0" stroke="#f4b43a" stroke-width="3.5" fill="none"/>
+<circle cx="56" cy="101" r="2" fill="#3b2340"/><circle cx="68" cy="101" r="2" fill="#3b2340"/>
+<circle cx="51" cy="109" r="3.5" fill="#f08a8a" opacity=".5"/><circle cx="73" cy="109" r="3.5" fill="#f08a8a" opacity=".5"/>
+<path d="M56 111q6 6 12 0" stroke="#9b3d4a" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<g id="potG">
+<path d="M122 112h166q-4 34-30 52q-20 10-53 10t-53-10q-26-18-30-52z" fill="url(#cu)"/>
+<path d="M126 134q79 14 158 0" stroke="#b3652c" stroke-width="2.5" fill="none"/>
+<g fill="#8a4f22"><circle cx="150" cy="124" r="1.8"/><circle cx="178" cy="126" r="1.8"/><circle cx="205" cy="127" r="1.8"/><circle cx="232" cy="126" r="1.8"/><circle cx="260" cy="124" r="1.8"/></g>
+<circle cx="116" cy="124" r="7" fill="none" stroke="#8a4f22" stroke-width="3.5"/><circle cx="294" cy="124" r="7" fill="none" stroke="#8a4f22" stroke-width="3.5"/>
+<ellipse cx="205" cy="112" rx="83" ry="12" fill="#f0b36e"/>
+<ellipse id="mix" cx="205" cy="113" rx="74" ry="9" fill="#5a3a2b"/>
+<g id="bb" opacity="0" fill="#fff" fill-opacity=".75"><circle cx="165" cy="114" r="3"/><circle cx="195" cy="116" r="2.5"/><circle cx="228" cy="113" r="3"/><circle cx="248" cy="115" r="2.5"/></g><ellipse id="sw" cx="205" cy="113" rx="52" ry="6" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="3" stroke-linecap="round" stroke-dasharray="26 52"/><g id="nuts" opacity="0"><ellipse cx="178" cy="113" rx="6" ry="3" fill="#f7e7c4" transform="rotate(-20 178 113)"/><ellipse cx="216" cy="117" rx="6" ry="3" fill="#f7e7c4" transform="rotate(15 216 117)"/><ellipse cx="244" cy="112" rx="6" ry="3" fill="#f7e7c4"/><circle cx="196" cy="118" r="2.6" fill="#8cc34a"/><circle cx="230" cy="108" r="2.6" fill="#8cc34a"/><circle cx="166" cy="116" r="2.6" fill="#8cc34a"/></g>
+<path d="M140 138q4 16 16 24" stroke="#fff" stroke-opacity=".4" stroke-width="4" fill="none" stroke-linecap="round"/>
+</g>
+<g id="arm"><path id="sl" d="M82 148L108 143" stroke="#17896e" stroke-width="12" stroke-linecap="round" fill="none"/><circle id="cf" cx="108" cy="143" r="6.5" fill="#f4b43a"/><circle id="hd" cx="114" cy="142" r="5" fill="#f0bf98"/><path id="pd" d="M114 142L205 113" stroke="#a8683a" stroke-width="5" stroke-linecap="round"/><ellipse id="bl" cx="207" cy="113" rx="11" ry="5" fill="#a8683a"/></g>
+<g id="sm" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0"><path d="M172 98q-8-12 0-24t0-20"/><path d="M205 98q-8-12 0-24t0-20"/><path d="M238 98q-8-12 0-24t0-20"/></g>
+<text id="ing" x="205" y="52" font-size="34" text-anchor="middle" opacity="0" style="transform-box:fill-box;transform-origin:center"></text>
+<text id="prop" x="322" y="224" font-size="40" text-anchor="middle" style="transform-box:fill-box;transform-origin:center"></text>
+<g id="bub" opacity="0" style="transition:opacity .3s;pointer-events:none"><rect x="92" y="52" width="116" height="32" rx="15" fill="#fff"/><path d="M100 84l-12 14l22-8z" fill="#fff"/><text id="bt" x="150" y="73" font-size="14" font-weight="800" text-anchor="middle" fill="#3b2340"></text></g><g id="fxg" style="pointer-events:none"></g><g id="trayG" style="display:none" transform="translate(10 16)">
+<ellipse cx="195" cy="188" rx="94" ry="16" fill="#aeb6c4"/><ellipse cx="195" cy="185" rx="82" ry="12" fill="#e9edf4"/>
+<path d="M122 184q10-46 73-46t73 46q-73 20-146 0z" fill="url(#hw)"/>
+<ellipse cx="168" cy="152" rx="26" ry="6" fill="#fff" opacity=".28" transform="rotate(-12 168 152)"/>
+<g fill="#f7e7c4"><ellipse cx="160" cy="150" rx="7" ry="3.3" transform="rotate(25 160 150)"/><ellipse cx="190" cy="146" rx="7" ry="3.3" transform="rotate(-15 190 146)"/><ellipse cx="220" cy="152" rx="7" ry="3.3" transform="rotate(20 220 152)"/><ellipse cx="148" cy="170" rx="7" ry="3.3" transform="rotate(-25 148 170)"/><ellipse cx="180" cy="168" rx="7" ry="3.3" transform="rotate(10 180 168)"/><ellipse cx="212" cy="170" rx="7" ry="3.3" transform="rotate(-20 212 170)"/><ellipse cx="243" cy="168" rx="7" ry="3.3" transform="rotate(25 243 168)"/></g>
+<g fill="#8cc34a"><circle cx="175" cy="158" r="2.8"/><circle cx="205" cy="160" r="2.8"/><circle cx="232" cy="160" r="2.8"/><circle cx="165" cy="164" r="2.8"/><circle cx="198" cy="150" r="2.8"/></g>
+<g transform="translate(312 190)"><path d="M-15 0q-6-26 6-36l2-8h14l2 8q12 10 6 36z" fill="#e0a82e"/><path d="M15-28l16-10" stroke="#e0a82e" stroke-width="4" stroke-linecap="round"/><path d="M-15-26q-14 4-10 24" stroke="#e0a82e" stroke-width="3" fill="none"/></g>
+<text class="tw" x="120" y="130" font-size="22">✨</text><text class="tw" x="255" y="125" font-size="26" style="animation-delay:.5s">✨</text><text class="tw" x="190" y="108" font-size="20" style="animation-delay:.9s">✨</text>
+</g>
+</svg>
+</div>
+<div class="tb" id="tb"></div>
+<div class="pn" id="pn"></div>
+</main>
+<script>
+const S=[
+{n:'تجهيز المقادير',e:'🥣',c:'#bfe3ee',d:'نجهّز الأوعية ونقيس المقادير بدقّة.',q:'نجهّز مقادير حلوى العيد. احسبي ناتج الضرب:',x:'3/4 × 8 = ?',a:'6',o:['3/32','24','2'],h:'اضربي البسط 3 في العدد 8 وأبقي المقام كما هو، ثم اختصري.',s:'3/4 × 8 = 24/4 = 6'},
+{n:'إذابة النشا وإضافة السكر',e:'💧',c:'#efe0a8',d:'نذيب النشا في الماء، ثم نضيف السكر ونحرّك.',q:'نذيب النشا والسكر في الماء. احسبي ناتج الضرب:',x:'1/2 × 3/4 = ?',a:'3/8',o:['2/3','3/2','1/8'],h:'اضربي البسط في البسط والمقام في المقام.',s:'1/2 × 3/4 = 3/8'},
+{n:'الطبخ على نار هادئة',e:'🔥',c:'#e3a23c',d:'نخفض النار ونطبخ الخليط ونحرّكه بلا توقف.',q:'لدينا 12 كوباً من الخليط، وطُبخ منه 5/6 حتى الآن. كم كوباً طُبخ؟',a:'10',o:['2','60','5/72'],h:'اقسمي 12 على 6 أولاً، ثم اضربي الناتج في 5.',s:'5/6 × 12 = 60/6 = 10'},
+{n:'إضافة السمن',e:'🧈',c:'#cc7a20',d:'نضيف السمن تدريجياً حتى يلمع الخليط.',q:'نضيف 3/4 كوب من السمن البلدي، ونستخدم 2/3 منه في الدفعة الأولى. كم كوباً نستخدم؟',a:'1/2',o:['5/7','9/8','1/4'],h:'اضربي البسط في البسط والمقام في المقام، ثم اختصري.',s:'3/4 × 2/3 = 6/12 = 1/2'},
+{n:'التعطير والمكسرات',e:'🌹',c:'#a8481a',d:'نعطّر الحلوى بالهيل والزعفران وماء الورد، ثم نضيف اللوز والفستق.',q:'نعطّر الحلوى بماء ورد الجبل الأخضر. احسبي الناتج في أبسط صورة:',x:'5/6 × 9/10 = ?',a:'3/4',o:['7/8','25/27','1/2'],h:'اختصري قبل الضرب: 5 مع 10، و9 مع 6.',s:'5/6 × 9/10 = 45/60 = 3/4'},
+{n:'السكب والتقديم',e:'🍯',c:'#8f3a0c',d:'نسكب الحلوى في الصينية ونزيّنها ونقدّمها للضيوف.',q:'تتسع صينية الضيافة لـ 8/15 كيلوغرام من الحلوى، وقدّمت منى 5/12 منها لضيوف العيد. كم كيلوغراماً قدّمت؟',a:'2/9',o:['13/27','32/25','1/6'],h:'اختصري 8 مع 12، و5 مع 15 قبل الضرب.',s:'8/15 × 5/12 = 40/180 = 2/9'}
+];
+const $=id=>document.getElementById(id);
+const D=t=>String(t).replace(/\d/g,x=>'٠١٢٣٤٥٦٧٨٩'[x]);
+const F=t=>D(t).replace(/([٠-٩]+)\/([٠-٩]+)/g,'<span class="f"><i>$1</i><i>$2</i></span>');
+let i=0,sc=0,tr=0,lk=0,NT=1,ts=[0],tm=0;const TN=['المجموعة ١','المجموعة ٢','المجموعة ٣','المجموعة ٤','المجموعة ٥','المجموعة ٦'],TC=['#db161b','#008000','#e8a317','#7a2e78','#1f8a8a','#2f6fdb'];let t0=0;
+function tb(){const e=$('tb');e.style.display=NT>1?'flex':'none';e.innerHTML=TN.slice(0,NT).map((n,j)=>`<span style="--c:${TC[j]}" class="${j==tm?'cur':''}">${n} <b>${D(ts[j])}</b></span>`).join('')}
+$('pr').innerHTML=S.map(s=>`<span>${s.e}</span>`).join('');
+function mark(){[...$('pr').children].forEach((c,j)=>c.className=j<i?'dn':j==i?'on':'')}
+function pot(k){
+ CK=k;$('mix').style.fill=k?S[k-1].c:'#5a3a2b';
+ $('fl').style.opacity=[0,.4,.7,1,1,1,1][k];
+ $('sm').style.opacity=Math.min(1,k*.18);
+ $('nuts').style.opacity=k>=5?1:0;$('bb').style.opacity=k>=3?1:0;
+ $('prop').textContent=S[k]?S[k].e:'';
+}
+function intro(){
+ i=0;st=0;mt=0;pot(0);mark();tb();
+ $('trayG').style.display='none';$('potG').style.display='';$('hearth').style.display='';$('arm').style.display='';
+ $('pn').innerHTML=`<h2>🇴🇲 مرحباً بكِ في بيت الضيافة العُماني</h2><p>الحلوى العُمانية رمز كرم الضيافة وفرحة العيد. حلّي مسائل ضرب الكسور، واسكبي المكوّنات، وحرّكي الحلوى بسرعة حتى تنضج وتُقدَّم للضيوف!</p><p class="d">اختاري طريقة اللعب:</p><div class="g"><button onclick="start(6)">٦ مجموعات</button><button onclick="start(4)">٤ مجموعات</button><button onclick="start(3)">٣ مجموعات</button><button onclick="start(1)">لعب فردي</button></div><p class="d">اختاري طالبة من كل مجموعة لتحلّ سؤالاً، والمجموعة الأعلى نقاطاً تنال لقب «أمهر طاهية» 🏆</p>`;
+}
+function start(n){NT=n||1;ts=Array(NT).fill(0);tm=0;
+ ac();CK=0;i=0;sc=0;$('sc').textContent=D(0);
+ $('trayG').style.display='none';$('potG').style.display='';$('hearth').style.display='';
+ $('arm').style.display='';say('هيا نبدأ الطبخ! 🍯');
+ pot(0);show();
+}
+function show(){
+ tr=0;lk=0;st=0;mt=0;tm=i%NT;t0=Date.now();tb();if(NT>1)say('دور '+TN[tm]);mark();$('prop').classList.remove('pu');const s=S[i];
+ $('pn').innerHTML=`${NT>1?`<div class="turn">🙋 دور ${TN[tm]}: اختاري طالبة لتحلّ السؤال</div>`:''}<span class="chip">المرحلة ${D(i+1)} من ${D(S.length)}: ${s.n}</span><p class="d">${s.d}</p><h2 class="q">${F(s.q)}</h2>${s.x?`<div class="ex">${F(s.x)}</div>`:''}<div class="g">${[s.a,...s.o].sort(()=>Math.random()-.5).map(v=>`<button onclick="pick(this,'${v}')">${F(v)}</button>`).join('')}</div><div id="fb"></div>`;
+}
+function pick(b,v){
+ if(lk)return;const s=S[i];
+ if(v===s.a){
+  lk=1;b.className='ok';const pt=tr?5:10+Math.max(0,5-Math.floor((Date.now()-t0)/6000));sc+=pt;ts[tm]+=pt;tb();$('sc').textContent=D(sc);sOK();say('أحسنتِ! +'+D(pt)+' 🎉');fx('⭐',5);
+  $('prop').classList.add('pu');
+  $('fb').innerHTML=`<div class="sol">✅ الحل:<div class="ex">${F(s.s)}</div></div><button class="go pl" onclick="pour()">${s.e} ${i<S.length-1?'اسكبي في القدر':'قدّمي الحلوى'}</button>`;
+ }else{
+  tr=1;b.className='no';b.disabled=true;sNO();say('جرّبي مرة أخرى 🤔');
+  $('fb').innerHTML=`<div class="hint">💡 تلميح: ${F(s.h)}</div>`;
+ }
+}
+function pour(){
+ const s=S[i],k=i+1,g=$('ing'),last=i==S.length-1;
+ $('prop').classList.remove('pu');$('fb').innerHTML='';g.textContent=s.e;sWh();
+ g.animate([{transform:'translate(117px,172px) scale(.8)'},{transform:'translate(55px,30px) scale(1.3)',offset:.55},{transform:'translate(0px,62px) scale(.7)'}],{duration:900,easing:'ease-in'}).onfinish=()=>{
+  opacity_fix();splash();
+  if(last){i++;fin()}else{pot(k);stirGame()}
+ };
+}
+function opacity_fix(){}
+function stirGame(){
+ mt=20;st=1;say('حرّكي! 💪');
+ $('fb').innerHTML=`<div class="sol">🌀 حرّكي الحلوى بسرعة قبل أن تلتصق بالقدر!<div class="mb"><i id="mb"></i></div></div><button class="go" onclick="tap()">حرّكي 🌀</button>`;
+}
+function tap(){
+ if(!st)return;mt=Math.min(100,mt+17);sTp();
+ if(mt>=100){st=0;sDone();say('ممم ما أطيبها 😋');fx('✨',8);setTimeout(nx,1100)}
+}
+function splash(){sSp();fx('💦',6);const q=$('potG');q.classList.remove('wb');void q.getBoundingClientRect();q.classList.add('wb')}
+function fx(c,n){
+ const g=$('fxg');
+ for(let j=0;j<n;j++){
+  const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+  t.textContent=c;t.setAttribute('x',205);t.setAttribute('y',105);t.setAttribute('font-size',17);t.setAttribute('text-anchor','middle');g.appendChild(t);
+  const a=Math.random()*6.28,r=40+Math.random()*55;
+  t.animate([{transform:'translate(0px,0px)',opacity:1},{transform:`translate(${Math.cos(a)*r}px,${Math.sin(a)*r-30}px)`,opacity:0}],{duration:800+Math.random()*400}).onfinish=()=>t.remove();
+ }
+}
+function say(t){const b=$('bub');$('bt').textContent=t;b.style.opacity=1;clearTimeout(say.t);say.t=setTimeout(()=>b.style.opacity=0,2300)}
+let AC,NB,SM,MU=0;
+function ac(){
+ if(!AC){AC=new(window.AudioContext||window.webkitAudioContext)();const n=AC.sampleRate*2,b=AC.createBuffer(1,n,AC.sampleRate),d=b.getChannelData(0);
+  for(let j=0;j<n;j++)d[j]=Math.random()*2-1;NB=b;
+  const r=AC.createBufferSource(),f=AC.createBiquadFilter(),g=AC.createGain();r.buffer=NB;r.loop=true;f.type='bandpass';f.frequency.value=2600;f.Q.value=.5;g.gain.value=0;r.connect(f);f.connect(g);g.connect(AC.destination);r.start();SM=g}
+ if(AC.state==='suspended')AC.resume();return AC}
+function tn(f,t=0,d=.15,ty='triangle',v=.12,f2){
+ if(MU)return;const a=ac(),o=a.createOscillator(),g=a.createGain(),s=a.currentTime+t;
+ o.type=ty;o.frequency.setValueAtTime(f,s);if(f2)o.frequency.exponentialRampToValueAtTime(f2,s+d);
+ g.gain.setValueAtTime(v,s);g.gain.exponentialRampToValueAtTime(.001,s+d);o.connect(g);g.connect(a.destination);o.start(s);o.stop(s+d+.02)}
+function ns(t=0,d=.2,fr=1000,ty='bandpass',v=.15,q=1){
+ if(MU)return;const a=ac(),s=a.currentTime+t,r=a.createBufferSource(),f=a.createBiquadFilter(),g=a.createGain();
+ r.buffer=NB;f.type=ty;f.frequency.value=fr;f.Q.value=q;g.gain.setValueAtTime(v,s);g.gain.exponentialRampToValueAtTime(.001,s+d);
+ r.connect(f);f.connect(g);g.connect(a.destination);r.start(s,Math.random()*1.5);r.stop(s+d+.02)}
+const sOK=()=>{[523,659,784,1047].forEach((f,j)=>tn(f,j*.09,.22,'triangle',.13));tn(1568,.36,.4,'sine',.07);ns(.3,.3,6000,'highpass',.04)};
+const sNO=()=>{tn(260,0,.2,'sawtooth',.08,180);tn(190,.2,.35,'sawtooth',.08,110)};
+const sWh=()=>{tn(400,0,.5,'sine',.05,1100);ns(0,.5,1200,'bandpass',.04,.6)};
+const sSp=()=>{ns(0,.5,2200,'bandpass',.2,.6);tn(260,0,.18,'sine',.2,90);tn(180,.12,.15,'sine',.12,80)};
+const sTp=()=>{tn(170+mt,0,.09,'square',.05,90);ns(0,.08,600,'bandpass',.1,2)};
+const sDone=()=>{[523,659,784,1047,1319].forEach((f,j)=>tn(f,j*.08,.3,'triangle',.13))};
+const sWin=()=>{[523,523,659,784,659,784,1047].forEach((f,j)=>tn(f,j*.13,.25,'triangle',.14));tn(1319,.95,.6,'sine',.1)};
+function mute(){MU=!MU;$('mu').textContent=MU?'🔇':'🔊';if(!MU){ac();sOK()}}
+document.addEventListener('pointerdown',()=>{try{ac()}catch(e){}});
+function nx(){i++;i<S.length?show():fin()}
+function fin(){
+ st=0;mt=0;CK=0;mark();say('بالهناء والعافية! 🎉');fx('✨',10);sWin();
+ $('potG').style.display='none';$('hearth').style.display='none';$('arm').style.display='none';$('trayG').style.display='';
+ $('fl').style.opacity=0;$('sm').style.opacity=0;$('prop').textContent='';
+ const mx=S.length*15,t=sc>=mx*.7?3:sc>=mx*.45?2:1;
+ const w=Math.max(...ts),win=TN.slice(0,NT).filter((n,j)=>ts[j]==w).join(' و ');
+ $('pn').innerHTML=`<h2>الحلوى العُمانية جاهزة! 🎉</h2>${NT>1?`<div class="stars">🏆</div><p style="text-align:center"><b>المجموعة الفائزة: ${win}</b></p>`:`<div class="stars">${'⭐'.repeat(t)}</div><p style="text-align:center">نتيجتك: <b>${D(sc)}</b> من ${D(mx)}</p>`}<div class="cd">🇴🇲 الحلوى العُمانية رمز لكرم الضيافة والاعتزاز بالتراث.<br>لمن ستقدّمين هذه الحلوى؟ وكيف ستحافظين على تراثنا؟</div><div class="vl"><span>كرم الضيافة</span><span>الاعتزاز بالتراث</span><span>التعاون</span></div><button class="go" onclick="intro()">العبي من جديد</button>`;
+}
+let ph=0,mt=0,st=0,CK=0,lr=0;
+document.querySelector('svg').addEventListener('click',tap);
+(function lp(){
+ ph+=.05+mt*.0022;if(st)mt=Math.max(0,mt-.25);
+ const hx=114+6*Math.cos(ph),hy=142+3*Math.sin(ph),tx=205+46*Math.cos(ph),ty=113+6*Math.sin(ph);
+ $('sl').setAttribute('d',`M82 148L${hx-6} ${hy+1}`);
+ [['cf',hx-6,hy+1],['hd',hx,hy],['bl',tx+2,ty]].forEach(([n,x,y])=>{$(n).setAttribute('cx',x);$(n).setAttribute('cy',y)});
+ $('pd').setAttribute('d',`M${hx} ${hy}L${tx} ${ty}`);
+ $('sw').style.strokeDashoffset=-ph*14;
+ if(AC&&!MU&&CK){const rv=Math.floor(ph/6.283);if(rv!==lr){lr=rv;ns(0,.16,700+mt*8,'bandpass',.05+mt*.0006,.9)}
+  if(Math.random()<.02+mt*.0008+CK*.004)tn(180+Math.random()*260,0,.07,'sine',.07,400+Math.random()*300)}
+ if(SM)SM.gain.value=(MU||!CK)?0:.012*CK+mt*.0004;
+ const m=$('mb');if(m)m.style.width=mt+'%';
+ requestAnimationFrame(lp);
+})();
+intro();
+</script>
+</body>
+</html>
